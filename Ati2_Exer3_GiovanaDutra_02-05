@@ -1,0 +1,118 @@
+//Em um sistema de menu interativo, como criar uma opção que permita ao usuário escolher entre diferentes funcionalidades (como calcular, listar, atualizar, sair, etc.) com base em sua seleção? Implemente isso usando uma estrutura escolha caso.
+
+programa {
+  funcao inicio() {
+    inteiro opcao, opcao2
+    inteiro quantidade
+    escreva("Insira a quantidade de números que deseja inserir na lista: ")
+    leia(quantidade)
+    inteiro lista[quantidade]
+    limpa()
+    para(inteiro i = 0; i < quantidade; i ++){
+      escreva("Insira o número: ")
+      leia(lista[i])
+    }
+
+    limpa()
+    escreva("Deseja ver o Menu? Insira: \n1- Sim \n2- Não \n")
+    leia(opcao2)
+    limpa()
+
+    faca{
+      escreva("\nMenu: \n1- Calculadora \n2- Lista \n3- Atualizar \n4- Sair \n")
+    leia(opcao)
+    escolha(opcao){
+      caso 1:
+      limpa()
+      caracter calculo
+      escreva("Insira o cálculo: \n1- + \n2- - \n3- / \n4- * \n")
+      leia(calculo)
+      se(calculo == 1){
+        limpa()
+        inteiro quantidade, soma = 0
+        escreva("Insira a quantidade de números que deseja somar: ")
+        leia(quantidade)
+        inteiro vetor[quantidade]
+        para(inteiro i = 0; i < quantidade; i ++){
+          escreva("Insira o número " ,i, ": ")
+          leia(vetor[i])
+          soma = vetor[i] + soma 
+      }
+      limpa()
+      escreva("A soma destes números é igual a: " ,soma)
+    }
+    se(calculo == 2){
+        limpa()
+        inteiro quantidade, subtracao = 0
+        escreva("Insira a quantidade de números que deseja subtrair: ")
+        leia(quantidade)
+        inteiro vetor[quantidade]
+        para(inteiro i = 0; i < quantidade; i ++){
+          escreva("Insira o número " ,i, ": ")
+          leia(vetor[i])
+          subtracao = vetor[i] - subtracao 
+      }
+      limpa()
+      escreva("A subtração destes números é igual a: " ,subtracao)
+    }
+    se(calculo == 3){
+        limpa()
+        inteiro quantidade, multiplicacao = 1
+        escreva("Insira a quantidade de números que deseja multiplicar: ")
+        leia(quantidade)
+        inteiro vetor[quantidade]
+        para(inteiro i = 0; i < quantidade; i ++){
+          escreva("Insira o número " ,i, ": ")
+          leia(vetor[i])
+          multiplicacao = vetor[i] * multiplicacao 
+      }
+      limpa()
+      escreva("A multiplicação destes números é igual a: " ,multiplicacao)
+    }
+    se(calculo == 4){
+        limpa()
+        inteiro quantidade
+        real divisao = 1
+        escreva("Insira a quantidade de números que deseja dividir: ")
+        leia(quantidade)
+        inteiro vetor[quantidade]
+        para(inteiro i = 0; i < quantidade; i ++){
+          escreva("Insira o número " ,i, ": ")
+          leia(vetor[i])
+          divisao = vetor[i] / divisao 
+      }
+      limpa()
+      escreva("A divisão destes números é igual a: " ,divisao)
+    }
+    pare
+
+    caso 2:
+    limpa()
+    escreva(lista)
+    pare
+
+    caso 3:
+    limpa()
+      inteiro novo, posicao
+      escreva(lista)
+      escreva("\nQual a posição do número que deseja alterar: \n")
+      leia(posicao)
+      escreva("Insira o novo número: ")
+      leia(novo)
+      lista[posicao] = novo
+    pare
+
+    caso 4:
+    limpa() 
+    escreva("Deseja sair do programa? Insira: \n1- Não \n2- Sim \n")
+    leia(opcao2)
+    se(opcao2 == 2){
+      limpa()
+      escreva("Fim da seção.")
+    }
+  }
+    }
+    enquanto(opcao2 == 1)
+ }
+}
+

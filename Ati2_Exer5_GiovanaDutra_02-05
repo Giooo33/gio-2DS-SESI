@@ -1,0 +1,82 @@
+//Em um sistema de análise de desempenho escolar, como determinar se um aluno foi aprovado em todas as disciplinas com base em suas notas, considerando um vetor de notas e um limiar de aprovação?
+
+programa {
+  funcao inicio() {
+    inteiro opcao
+    real matematica[4]
+    real linguagens[4]
+    real cienciasdanatureza[4]
+    real cienciashumanas[4]
+    real desenvolvimentodesistemas[4]
+    inteiro media1 = 0, media2 = 0, media3 = 0, media4 = 0, media5 = 0
+    real mediaMat, mediaLin, mediaCn, mediaCh, mediaDs 
+    para(inteiro i = 0; i < 4; i ++){
+      escreva("Insira a nota " ,i, " do aluno na disciplina Matemática: ")
+      leia(matematica[i])
+      media1 = matematica[i] + media1
+      escreva("Insira a nota " ,i, " do aluno na disciplina Linguagens: ")
+      leia(linguagens[i])
+      media2 = linguagens[i] + media2
+      escreva("Insira a nota " ,i, " do aluno na disciplina Ciências da Natureza: ")
+      leia(cienciasdanatureza[i])
+      media3 = cienciasdanatureza[i] + media3
+      escreva("Insira a nota " ,i, " do aluno na disciplina Ciências Humanas: ")
+      leia(cienciashumanas[i])
+      media4 = cienciashumanas[i] + media4
+      escreva("Insira a nota " ,i, " do aluno na disciplina Desenvolvimento de Sistemas: ")
+      leia(desenvolvimentodesistemas[i])
+      media5 = desenvolvimentodesistemas[i] + media5
+      limpa()
+  }
+
+  mediaMat = media1/4
+  mediaLin = media2/4
+  mediaCn = media3/4
+  mediaCh = media4/4
+  mediaDs = media5/4
+
+  para(inteiro i = 0; i < 1; i ++){
+    se(mediaMat > 7){
+    escreva("Este aluno foi aprovado na disciplina Matemática")
+  }
+  senao se(mediaMat < 7){
+    escreva("Este aluno não foi aprovado na disciplina Matemática")
+  }
+  }
+  para(inteiro i = 0; i < 1; i ++){
+    se(mediaLin > 7){
+    escreva("\nEste aluno foi aprovado na disciplina Linguagens")
+  }
+   senao se(mediaLin < 7){
+    escreva("\nEste aluno não foi aprovado na disciplina Linguagens")
+  }
+  }
+   para(inteiro i = 0; i < 1; i ++){
+    se(mediaCn > 7){
+    escreva("\nEste aluno foi aprovado na disciplina Ciências da Natureza")
+  }
+   senao se(mediaCn < 7){
+    escreva("\nEste aluno não foi aprovado na disciplina Ciências da Natureza")
+  }
+  }
+   para(inteiro i = 0; i < 1; i ++){
+    se(mediaCh > 7){
+    escreva("\nEste aluno foi aprovado na disciplina Ciências Humanas")
+  }
+   senao se(mediaCh < 7){
+    escreva("\nEste aluno não foi aprovado na disciplina Ciências Humanas")
+  }
+  }
+   para(inteiro i = 0; i < 1; i ++){
+    se(mediaDs > 7){
+    escreva("\nEste aluno foi aprovado na disciplina Desenvolvimento de Sistemas")
+  }
+   senao se(mediaDs < 7){
+    escreva("\nEste aluno não foi aprovado na disciplina Desenvolvimento de Sistemas")
+  }
+  }
+  }
+  }
+  
+  
+ 

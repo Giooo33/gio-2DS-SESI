@@ -1,0 +1,78 @@
+//Em um sistema de autenticação de usuário, como implementar a verificação de login, onde o sistema solicita o nome de usuário e senha e verifica se correspondem aos dados armazenados? Utilize a estrutura se para comparar os dados inseridos com os dados armazenados.
+
+programa {
+  funcao inicio() {
+    inteiro senha, senha2
+    cadeia usuario, login
+    escreva("Determine um nome para o usuário para o login: \n")
+    leia(usuario)
+    limpa()
+    escreva("Determine uma senha para o login: \n")
+    leia(senha)
+    limpa()
+    escreva("Autenticação do usuário\n")
+    escreva("Insira o login: ")
+    leia(login)
+    limpa()
+    se(login == usuario){
+      escreva("Autenticação do usuário verificada\n")
+      escreva("Autenticação da senha do usúario\n")
+      escreva("Insira a senha: ")
+      leia(senha2)
+      limpa()
+      se(senha2 == senha){
+        escreva("Senha correta. Acesso liberado.")
+      }
+      senao se(senha2 != senha){
+        para(inteiro i = 0; i < 2; i ++){
+          limpa()
+          escreva("\nEsta senha não corresponde do login " ,usuario, " cadastrado anteriormente. Tente de novo.\n")
+          escreva("Insira a senha: ")
+          leia(senha2)
+          se(senha2 == senha){
+            para(inteiro i = 0; i < 2; i ++){
+              limpa()
+              escreva("Senha correta. Acesso liberado.")
+            }
+          }
+        }
+      }
+    }
+    senao se(login != usuario){
+      para(inteiro i = 0; i < 2; i ++){
+        limpa()
+        escreva("\nEste usuário não corresponde do login cadastrado anteriormente. Tente de novo.\n")
+        escreva("Insira a login: ")
+        leia(login)
+        se(login == usuario){
+          para(inteiro i = 0; i < 2; i ++){
+            limpa()
+            escreva("Autenticação do usuário verificada\n")
+          }
+          escreva("Autenticação da senha do usúario\n")
+          escreva("Insira a senha: ")
+          leia(senha2)
+          limpa()
+
+          se(senha2 == senha){
+            escreva("Senha correta. Acesso liberado.")
+          }
+          senao se(senha2 != senha){
+            para (inteiro i = 0; i < 2; i ++){
+              limpa()
+               escreva("\nEsta senha não corresponde do login " ,usuario, " cadastrado anteriormente. Tente de novo.\n")
+               escreva("Insira a senha: ")
+               leia(senha2)
+               se(senha2 == senha)
+               para(inteiro i = 0; i < 2; i ++){
+              limpa()
+              escreva("Senha correta. Acesso liberado.")
+            }
+               }
+            }
+          }
+        }
+      }
+    }
+  }
+

@@ -1,0 +1,67 @@
+//Em um aplicativo de compras online, como permitir que o usuário escolha entre diferentes opções de entrega (normal, expressa, retirada na loja) com base em critérios como localização e urgência? Utilize a estrutura se para oferecer as opções disponíveis.
+
+programa {
+  funcao inicio() {
+    inteiro urgencia, quantidade
+    escreva("Qual a urgencai para a chegada do produto? \nInsira a melhor opção para a chegada do produto de acordo com sua necessida: \n1- Entrega normal \n2- Engreta expressa \n3- Retirada da loja\n ")
+    leia(urgencia)
+    limpa()
+    se(urgencia == 1){
+      inteiro loja
+      cadeia pedido
+      escreva("Determine quantas lojas que possuem o produto desejado: ")
+      leia(loja)
+      cadeia lista[loja]
+      limpa()
+      para(inteiro i = 0; i < loja; i ++){
+        escreva("Insira a loja " ,i, ": ")
+        leia(lista[i])
+        limpa()
+    }
+    escreva("Estas são as lojas cadastradas que possuem o produto desejado: " ,lista)
+    escreva("\nEm qual das lojas será realizado o pedido? ")
+    leia(pedido)
+    limpa()
+    escreva("Loja selecionada! Faça seu pedido na loja " ,pedido, " pelo site " ,pedido, ".com.br")
+    }
+
+    senao se(urgencia == 2){
+      inteiro loja
+      cadeia pedido
+      escreva("Determine quantas lojas que possuem o produto desejado: ")
+      leia(loja)
+      limpa()
+      cadeia lista[loja]
+      inteiro localizacao [loja]
+      para(inteiro i =0; i < loja; i ++){
+        escreva("Insira a loja " ,i, ": ")
+        leia(lista[i])
+        escreva("Insira a distancia da loja " ,i, ": ")
+        leia(localizacao[i])
+        limpa()
+      }
+      escreva("Estas são as lojas cadastradas que possuem o produto desejado: \n" ,lista, "\nE suas respectivas distâncias referente sua localização atua: \n" ,localizacao)
+      escreva("\nEm qual das lojas será realizado o pedido? ")
+      leia(pedido)
+      limpa()
+      escreva("Loja selecionada! Faça seu pedido na loja " ,pedido, " pelo site " ,pedido, ".com.br")
+    }
+
+    senao se(urgencia == 3){
+      escreva("Determine quantas lojas que possuem o produto desejado: ")
+      leia(quantidade)
+      real vetor[quantidade], menor = 99999
+      limpa()
+      para(inteiro i = 0; i < quantidade; i ++){
+        escreva("Insira a distância da loja " ,i, " referente a sua localização: ")
+        leia(vetor[i])
+        menor = vetor[i]
+        se(vetor[i] > menor){
+          menor = vetor[i]
+        }
+      }
+      limpa()
+      escreva("A distância da loja mais próxima fica " ,menor, " metros da sua localização atual.")
+    }
+  }
+}

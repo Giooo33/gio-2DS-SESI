@@ -1,0 +1,45 @@
+//Em um sistema de gestão de estoque, como permitir ao usuário buscar por um produto específico e verificar sua disponibilidade em estoque? Utilize uma estrutura "faca" para permitir múltiplas tentativas de busca até que o usuário encontre o produto desejado.
+
+programa {
+  funcao inicio() {
+    inteiro resposta
+    escreva("Deseja ver o menu? Inira: \n1- Sim \n2- Não\n")
+    leia(resposta)
+    limpa()
+    faca{
+      inteiro pedido
+      inteiro coxinha = 70, kibi = 0, pastel = 54, empada = 0, enroladinhodequeijo = 49, pizza = 0 
+      para(inteiro i = 0; i < 6; i ++){
+      escreva("Menu: \n1- Coxinha \n2- Kibi \n3- Pastel \n4- Empada \n5- Enroladinho de queijo \n6- Pizza \n")
+      leia(pedido)
+      se(pedido == 1){
+        limpa()
+        escreva("Temos " ,coxinha, " coxinhas restantes.")
+      }
+      senao se(pedido == 2){
+        limpa()
+        escreva("Temos " ,kibi, " kibis restantes.")
+      }
+      senao se(pedido == 3){
+        limpa()
+        escreva("Temos " ,pastel, " pastéis restantes.")
+      }
+      senao se(pedido == 4){
+        limpa()
+        escreva("Temos " ,empada, " empadas restantes.")
+      }
+      senao se(pedido == 5){
+        limpa()
+        escreva("Temos " ,enroladinhodequeijo, " enroladinhos de queijo restantes.")
+      }
+      senao se(pedido == 6){
+        limpa()
+        escreva("Temos " ,pizza, " pizzas restantes.")
+      }
+      }
+    }
+    enquanto(resposta == 1)
+    
+  }
+}
+

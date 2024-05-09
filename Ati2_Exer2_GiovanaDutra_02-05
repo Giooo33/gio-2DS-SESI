@@ -1,0 +1,42 @@
+//Em um programa de análise de despesas mensais, como calcular o total de gastos em diferentes categorias (como alimentação, transporte, lazer, etc.) ao longo de um período? Utilize uma estrutura enquanto para continuar solicitando despesas até que o usuário decida parar.
+
+programa {
+  funcao inicio() {
+    inteiro pedido, pedido2
+		real despesa, soma = 0.0
+		escreva("Insira: \n1 Para adicionar uma despesa e \n2 Para parar \n")      
+		leia(pedido)
+		enquanto(pedido == 1){
+      limpa()
+      escreva("Insira: \n 1- Calcular as despesas da alimentação \n 2- Calcular as despesas de transporte \n 3- Calcular as despesas do lazer \n")
+      leia(pedido2)
+      se(pedido2 == 1){
+        limpa()
+        escreva("\nInsira o valor da despesa: ")
+			leia(despesa)
+			soma += despesa
+			escreva("O valor total das suas despesas é igual a R$" ,soma)
+      escreva("\nInsira: \n1 Para adicionar uma despesa e \n2 Para parar \n")      
+		  leia(pedido)
+      }se(pedido2 == 2){
+        limpa()
+        escreva("\nInsira o valor da despesa: ")
+			leia(despesa)
+			soma += despesa
+			escreva("O valor total das suas despesas é igual a R$" ,soma)
+      escreva("\nInsira: \n1 Para adicionar uma despesa e \n2 Para parar \n")      
+		  leia(pedido)
+      } se(pedido2 == 3){
+        limpa()
+        escreva("\nInsira o valor da despesa: ")
+			leia(despesa)
+			soma += despesa
+			escreva("O valor total das suas despesas é igual a R$" ,soma)
+      escreva("\nInsira: \n1 Para adicionar uma despesa e \n2 Para parar \n")      
+		  leia(pedido)
+      }
+			
+
+  }
+  }
+}
