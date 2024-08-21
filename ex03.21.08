@@ -1,0 +1,41 @@
+//Exercício 3:
+
+//Escreva um algoritmo que dado uma matriz 5x5 com valores inteiros únicos (pré determinados), o usuário informa um determinado numero e o algoritmo deve retornar a posição (linha e coluna) em que se encontra este numero. Imprimir "número par" caso este número seja par.//
+
+programa {
+  funcao inicio() {
+    
+    inteiro matriz[5][5] = {{111, 24, 3, 4, 223},
+                            {63, 7, 8, 29, 150},
+                            {11, 132, 13, 144, 15},
+                            {16, 170, 1338, 19, 200},
+                            {211, 202, 293, 2433, 205}}
+
+    inteiro numero
+    logico encontrou = falso
+    escreva("Insira um número: ")
+    leia(numero)
+
+    para(inteiro i = 0; i < 5; i ++){
+
+      para(inteiro l = 0; l < 5; l ++){         
+         escreva("")
+
+         se(numero == matriz[i][l]){
+          encontrou = verdadeiro
+          escreva(" O número " ,numero, " está na coluna " ,i, "ª e na linha " ,l, "ª.")
+
+          se(numero %2 ==0){
+
+            escreva("\n O número " ,numero, " é par.")
+          }
+         }
+      }
+    }
+    se(encontrou ==falso){
+      escreva("Não encontrei seu número \n")
+    }
+
+    }
+  }
+
